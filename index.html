@@ -46,7 +46,7 @@
       letter-spacing: 0.3px;
     }
 
-    /* Email Styling */
+    /* Email */
     .email {
       font-size: 16px;
     }
@@ -80,8 +80,7 @@
       width: 100%;
     }
 
-    /* Social Section */
-
+    /* Social */
     .social-section {
       margin-top: 60px;
     }
@@ -139,7 +138,7 @@
     </div>
 
     <div class="body-text">
-      Currently live for the NBA and WNBA, the standard is actively scaling across major professional and collegiate sports — establishing a consistent benchmark across leagues and seasons.
+      Currently live for the NBA and WNBA, the standard is actively scaling across major professional and collegiate sports, establishing a consistent benchmark across leagues and seasons.
     </div>
 
     <div class="body-text">
@@ -153,8 +152,6 @@
     <div class="email">
       <a href="mailto:rewatchabilityscore@gmail.com">rewatchabilityscore@gmail.com</a>
     </div>
-
-    <!-- Social Icons -->
 
     <div class="social-section">
       <div class="social-icons">
@@ -189,8 +186,9 @@
   </div>
 
   <script>
+    // Show Threads button on/after March 2, 2026 (visitor's local time)
     (function () {
-      var revealDate = new Date(2026, 2, 2); // March 2, 2026
+      var revealDate = new Date(2026, 2, 2); // March = 2 (0-based)
       var now = new Date();
       if (now >= revealDate) {
         var btn = document.getElementById("threadsBtn");
