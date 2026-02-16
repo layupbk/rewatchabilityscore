@@ -20,35 +20,35 @@
     }
 
     .container {
-      max-width: 640px;
-      padding: 40px 20px;
+      max-width: 700px;
+      padding: 50px 20px;
     }
 
     .logo {
-      width: 300px;
-      max-width: 80%;
+      width: 320px;
+      max-width: 85%;
       height: auto;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
     }
 
     .body-text {
-      font-size: 17px;
-      line-height: 1.7;
+      font-size: 18px;
+      line-height: 1.75;
       opacity: 0.85;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
     .contact-label {
       font-size: 14px;
       opacity: 0.6;
-      margin-top: 40px;
-      margin-bottom: 10px;
+      margin-top: 50px;
+      margin-bottom: 12px;
       letter-spacing: 0.3px;
     }
 
     .email {
-      font-size: 15px;
-      opacity: 0.9;
+      font-size: 16px;
+      opacity: 0.95;
     }
 
     .email a {
@@ -57,52 +57,54 @@
     }
 
     .email a:hover {
-      opacity: 0.7;
+      opacity: 0.65;
     }
 
-    /* Social block spacing (separate “section” like the other blocks) */
+    /* Social Section */
+
     .social-section {
-      margin-top: 50px;
+      margin-top: 60px;
     }
 
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
-    /* Black square button + white outline */
-    .icon-btn {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: #000;
-      border: 2px solid rgba(255, 255, 255, 0.85);
-      display: flex;
+    .icon-link {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      opacity: 0.92;
       transition: opacity 0.15s ease, transform 0.12s ease;
-      text-decoration: none;
-      user-select: none;
+      opacity: 0.9;
     }
 
-    .icon-btn:hover {
-      opacity: 0.65;
-      transform: translateY(-1px);
+    .icon-link:hover {
+      opacity: 0.6;
+      transform: translateY(-2px);
     }
 
-    /* Icon sizing */
-    .icon-btn img {
-      width: 26px;
-      height: 26px;
+    .icon-link img {
+      width: 34px; /* Slightly larger */
+      height: 34px;
       display: block;
     }
 
-    /* Hide Threads until reveal date */
     .hidden {
       display: none !important;
+    }
+
+    @media (max-width: 600px) {
+      .body-text {
+        font-size: 16px;
+      }
+
+      .icon-link img {
+        width: 30px;
+        height: 30px;
+      }
     }
   </style>
 </head>
@@ -129,44 +131,48 @@
     </div>
 
     <div class="email">
-      <a href="mailto:rewatchabilityscore@gmail.com">rewatchabilityscore@gmail.com</a>
+      <a href="mailto:rewatchabilityscore@gmail.com">
+        rewatchabilityscore@gmail.com
+      </a>
     </div>
 
-    <!-- Social Media Icon Buttons -->
+    <!-- Social Icons -->
+
     <div class="social-section">
       <div class="social-icons">
-        <a class="icon-btn" href="https://www.tiktok.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+
+        <a class="icon-link" href="https://www.tiktok.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
           <img src="TikTok.svg" alt="TikTok">
         </a>
 
-        <a class="icon-btn" href="https://x.com/rewatchscore" target="_blank" rel="noopener noreferrer" aria-label="X">
+        <a class="icon-link" href="https://x.com/rewatchscore" target="_blank" rel="noopener noreferrer" aria-label="X">
           <img src="X.svg" alt="X">
         </a>
 
-        <a id="threadsBtn" class="icon-btn hidden" href="https://www.threads.net/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+        <a id="threadsBtn" class="icon-link hidden" href="https://www.threads.net/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Threads">
           <img src="Threads.svg" alt="Threads">
         </a>
 
-        <a class="icon-btn" href="https://www.instagram.com/rewatchabilityscore/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a class="icon-link" href="https://www.instagram.com/rewatchabilityscore/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <img src="Instagram.svg" alt="Instagram">
         </a>
 
-        <a class="icon-btn" href="https://www.facebook.com/rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <a class="icon-link" href="https://www.facebook.com/rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <img src="Facebook.svg" alt="Facebook">
         </a>
 
-        <a class="icon-btn" href="https://www.youtube.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <a class="icon-link" href="https://www.youtube.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
           <img src="YouTube.svg" alt="YouTube">
         </a>
+
       </div>
     </div>
 
   </div>
 
   <script>
-    // Show Threads button on/after March 2, 2026 (visitor's local time)
     (function () {
-      var revealDate = new Date(2026, 2, 2); // March = 2 (0-based)
+      var revealDate = new Date(2026, 2, 2); // March 2, 2026
       var now = new Date();
       if (now >= revealDate) {
         var btn = document.getElementById("threadsBtn");
@@ -174,5 +180,6 @@
       }
     })();
   </script>
+
 </body>
 </html>
