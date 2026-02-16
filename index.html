@@ -49,6 +49,7 @@
     .email {
       font-size: 15px;
       opacity: 0.9;
+      margin-bottom: 26px;
     }
 
     .email a {
@@ -58,6 +59,38 @@
 
     .email a:hover {
       opacity: 0.7;
+    }
+
+    /* White buttons */
+    .social-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.85);
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      opacity: 0.9;
+      transition: opacity 0.15s ease;
+      user-select: none;
+    }
+
+    .btn:hover {
+      opacity: 0.65;
+    }
+
+    /* Hide Threads until we flip it on via JS */
+    .hidden {
+      display: none !important;
     }
   </style>
 </head>
@@ -87,6 +120,29 @@
       <a href="mailto:rewatchabilityscore@gmail.com">rewatchabilityscore@gmail.com</a>
     </div>
 
+    <div class="social-buttons">
+      <a class="btn" href="https://www.tiktok.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a class="btn" href="https://www.instagram.com/rewatchabilityscore/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="btn" href="https://www.youtube.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a class="btn" href="https://www.facebook.com/rewatchabilityscore" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a class="btn" href="https://x.com/rewatchscore" target="_blank" rel="noopener noreferrer">X</a>
+
+      <!-- Threads hidden until March 2026 -->
+      <a id="threadsBtn" class="btn hidden" href="https://www.threads.net/@rewatchabilityscore" target="_blank" rel="noopener noreferrer">Threads</a>
+    </div>
+
   </div>
+
+  <script>
+    // Show Threads button on/after March 1, 2026 (local time)
+    (function () {
+      var revealDate = new Date(2026, 2, 1); // Months are 0-based: 2 = March
+      var now = new Date();
+      if (now >= revealDate) {
+        var btn = document.getElementById("threadsBtn");
+        if (btn) btn.classList.remove("hidden");
+      }
+    })();
+  </script>
 </body>
 </html>
