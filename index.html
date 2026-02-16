@@ -60,36 +60,47 @@
       opacity: 0.7;
     }
 
-    /* Social Section Block */
+    /* Social block spacing (separate “section” like the other blocks) */
     .social-section {
-      margin-top: 50px; /* Increased spacing for separation */
+      margin-top: 50px;
     }
 
-    .social-buttons {
+    .social-icons {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      border: 1px solid rgba(255,255,255,0.85);
-      border-radius: 999px;
-      color: #fff;
+    /* Black square button + white outline */
+    .icon-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: #000;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.92;
+      transition: opacity 0.15s ease, transform 0.12s ease;
       text-decoration: none;
-      font-size: 13px;
-      letter-spacing: 0.3px;
-      opacity: 0.9;
-      transition: opacity 0.15s ease;
       user-select: none;
     }
 
-    .btn:hover {
+    .icon-btn:hover {
       opacity: 0.65;
+      transform: translateY(-1px);
     }
 
+    /* Icon sizing */
+    .icon-btn img {
+      width: 26px;
+      height: 26px;
+      display: block;
+    }
+
+    /* Hide Threads until reveal date */
     .hidden {
       display: none !important;
     }
@@ -121,26 +132,41 @@
       <a href="mailto:rewatchabilityscore@gmail.com">rewatchabilityscore@gmail.com</a>
     </div>
 
-    <!-- Social Media Block -->
+    <!-- Social Media Icon Buttons -->
     <div class="social-section">
-      <div class="social-buttons">
-        <a class="btn" href="https://www.tiktok.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a class="btn" href="https://www.instagram.com/rewatchabilityscore/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a class="btn" href="https://www.youtube.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a class="btn" href="https://www.facebook.com/rewatchabilityscore" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a class="btn" href="https://x.com/rewatchscore" target="_blank" rel="noopener noreferrer">X</a>
+      <div class="social-icons">
+        <a class="icon-btn" href="https://www.tiktok.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="TikTok.svg" alt="TikTok">
+        </a>
 
-        <!-- Threads hidden until March 2, 2026 -->
-        <a id="threadsBtn" class="btn hidden" href="https://www.threads.net/@rewatchabilityscore" target="_blank" rel="noopener noreferrer">Threads</a>
+        <a class="icon-btn" href="https://x.com/rewatchscore" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <img src="X.svg" alt="X">
+        </a>
+
+        <a id="threadsBtn" class="icon-btn hidden" href="https://www.threads.net/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+          <img src="Threads.svg" alt="Threads">
+        </a>
+
+        <a class="icon-btn" href="https://www.instagram.com/rewatchabilityscore/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="Instagram.svg" alt="Instagram">
+        </a>
+
+        <a class="icon-btn" href="https://www.facebook.com/rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="Facebook.svg" alt="Facebook">
+        </a>
+
+        <a class="icon-btn" href="https://www.youtube.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <img src="YouTube.svg" alt="YouTube">
+        </a>
       </div>
     </div>
 
   </div>
 
   <script>
-    // Show Threads button on/after March 2, 2026 (local time)
+    // Show Threads button on/after March 2, 2026 (visitor's local time)
     (function () {
-      var revealDate = new Date(2026, 2, 2);
+      var revealDate = new Date(2026, 2, 2); // March = 2 (0-based)
       var now = new Date();
       if (now >= revealDate) {
         var btn = document.getElementById("threadsBtn");
