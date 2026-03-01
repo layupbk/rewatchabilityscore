@@ -111,10 +111,6 @@
       display: block;
     }
 
-    .hidden {
-      display: none !important;
-    }
-
     @media (max-width: 600px) {
       .body-text {
         font-size: 16px;
@@ -164,7 +160,7 @@
           <img src="X.svg" alt="X">
         </a>
 
-        <a id="threadsBtn" class="icon-link hidden" href="https://www.threads.net/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+        <a class="icon-link" href="https://www.threads.net/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Threads">
           <img src="Threads.svg" alt="Threads">
         </a>
 
@@ -184,18 +180,6 @@
     </div>
 
   </div>
-
-  <script>
-    // Show Threads button on/after March 2, 2026 (visitor's local time)
-    (function () {
-      var revealDate = new Date(2026, 2, 2);
-      var now = new Date();
-      if (now >= revealDate) {
-        var btn = document.getElementById("threadsBtn");
-        if (btn) btn.classList.remove("hidden");
-      }
-    })();
-  </script>
 
 </body>
 </html>
