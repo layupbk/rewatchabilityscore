@@ -1,189 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rewatchability Score™</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-    }
+<title>Rewatchability Score™ | A Standard for Identifying the Most Compelling Games in Sports</title>
 
-    .container {
-      max-width: 700px;
-      padding: 50px 20px;
-    }
+<meta name="description" content="Rewatchability Score™ is a standardized 40–99 scale for identifying the most compelling games in sports. Designed for streaming platforms, media companies, and sports fans to discover the best games spoiler-free.">
 
-    .logo {
-      width: 320px;
-      max-width: 85%;
-      height: auto;
-      margin-bottom: 70px;
-    }
+<meta name="robots" content="index, follow">
 
-    .body-text {
-      font-size: 18px;
-      line-height: 1.75;
-      opacity: 0.85;
-      margin-bottom: 32px;
-    }
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
 
-    .contact-label {
-      font-size: 14px;
-      opacity: 0.6;
-      margin-top: 50px;
-      margin-bottom: 12px;
-      letter-spacing: 0.3px;
-    }
+<!-- Open Graph (social sharing) -->
+<meta property="og:title" content="Rewatchability Score™">
+<meta property="og:description" content="A standardized 40–99 scale for identifying the most compelling games in sports.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://rewatchabilityscore.com/favicon.png">
+<meta property="og:url" content="https://rewatchabilityscore.com">
 
-    /* Email */
-    .email {
-      font-size: 16px;
-    }
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rewatchability Score™">
+<meta name="twitter:description" content="A standardized scale for identifying the most compelling games in sports.">
+<meta name="twitter:image" content="https://rewatchabilityscore.com/favicon.png">
 
-    .email a {
-      color: #fff;
-      text-decoration: none;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 2px;
-      opacity: 0.9;
-      transition: opacity 0.15s ease;
-    }
+<style>
 
-    .email a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0%;
-      height: 1px;
-      background: rgba(255,255,255,0.6);
-      transition: width 0.2s ease;
-    }
+body {
+background-color:#000;
+color:#fff;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+text-align:center;
+}
 
-    .email a:hover {
-      opacity: 1;
-    }
+.container{
+max-width:700px;
+padding:50px 20px;
+}
 
-    .email a:hover::after {
-      width: 100%;
-    }
+.logo{
+width:320px;
+max-width:85%;
+height:auto;
+margin-bottom:70px;
+}
 
-    /* Social */
-    .social-section {
-      margin-top: 60px;
-    }
+.body-text{
+font-size:18px;
+line-height:1.75;
+opacity:.85;
+margin-bottom:32px;
+}
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
+.contact-label{
+font-size:14px;
+opacity:.6;
+margin-top:50px;
+margin-bottom:12px;
+letter-spacing:.3px;
+}
 
-    .icon-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.15s ease, transform 0.12s ease;
-      opacity: 0.9;
-    }
+.email{
+font-size:16px;
+}
 
-    .icon-link:hover {
-      opacity: 0.6;
-      transform: translateY(-2px);
-    }
+.email a{
+color:#fff;
+text-decoration:none;
+position:relative;
+display:inline-block;
+padding-bottom:2px;
+opacity:.9;
+transition:opacity .15s ease;
+}
 
-    .icon-link img {
-      width: 34px;
-      height: 34px;
-      display: block;
-    }
+.email a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0%;
+height:1px;
+background:rgba(255,255,255,.6);
+transition:width .2s ease;
+}
 
-    @media (max-width: 600px) {
-      .body-text {
-        font-size: 16px;
-      }
+.email a:hover{
+opacity:1;
+}
 
-      .icon-link img {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  </style>
+.email a:hover::after{
+width:100%;
+}
+
+.social-section{
+margin-top:60px;
+}
+
+.social-icons{
+display:flex;
+justify-content:center;
+gap:28px;
+flex-wrap:wrap;
+}
+
+.icon-link{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+transition:opacity .15s ease,transform .12s ease;
+opacity:.9;
+}
+
+.icon-link:hover{
+opacity:.6;
+transform:translateY(-2px);
+}
+
+.icon-link img{
+width:34px;
+height:34px;
+display:block;
+}
+
+@media (max-width:600px){
+
+.body-text{
+font-size:16px;
+}
+
+.icon-link img{
+width:30px;
+height:30px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
-  <div class="container">
 
-    <img src="rewatchability-logo.svg" alt="Rewatchability Score™" class="logo">
+<div class="container">
 
-    <div class="body-text">
-      Rewatchability Score™ is a standardized 40–99 scale that establishes a clear benchmark for identifying the most compelling games in sports – spoiler-free.
-    </div>
+<img src="rewatchability-logo.svg" alt="Rewatchability Score™" class="logo">
 
-    <div class="body-text">
-      Currently live for the NBA and WNBA, the standard is actively scaling across major professional and collegiate sports, establishing a consistent benchmark across leagues and seasons.
-    </div>
+<div class="body-text">
+Rewatchability Score™ is a standardized 40–99 scale that establishes a clear benchmark for identifying the most compelling games in sports – spoiler-free.
+</div>
 
-    <div class="body-text">
-      Designed for modern streaming, media, and archival platforms, Rewatchability Score™ supports smarter game discovery, highlight prioritization, scalable curation, and enhanced rewatch experiences.
-    </div>
+<div class="body-text">
+Currently live for the NBA and WNBA, the standard is actively scaling across major professional and collegiate sports, establishing a consistent benchmark across leagues and seasons.
+</div>
 
-    <div class="contact-label">
-      For partnership, licensing, media, or collaboration inquiries:
-    </div>
+<div class="body-text">
+Designed for modern streaming, media, and archival platforms, Rewatchability Score™ supports smarter game discovery, highlight prioritization, scalable curation, and enhanced rewatch experiences.
+</div>
 
-    <div class="email">
-      <a href="mailto:rewatchabilityscore@gmail.com">rewatchabilityscore@gmail.com</a>
-    </div>
+<div class="contact-label">
+For partnership, licensing, media, or collaboration inquiries:
+</div>
 
-    <div class="social-section">
-      <div class="social-icons">
+<div class="email">
+<a href="mailto:rewatchabilityscore@gmail.com">rewatchabilityscore@gmail.com</a>
+</div>
 
-        <a class="icon-link" href="https://www.tiktok.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-          <img src="TikTok.svg" alt="TikTok">
-        </a>
+<div class="social-section">
+<div class="social-icons">
 
-        <a class="icon-link" href="https://x.com/rewatchscore" target="_blank" rel="noopener noreferrer" aria-label="X">
-          <img src="X.svg" alt="X">
-        </a>
+<a class="icon-link" href="https://www.tiktok.com/@rewatchabilityscore" target="_blank">
+<img src="TikTok.svg" alt="TikTok">
+</a>
 
-        <a class="icon-link" href="https://www.threads.net/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Threads">
-          <img src="Threads.svg" alt="Threads">
-        </a>
+<a class="icon-link" href="https://x.com/rewatchscore" target="_blank">
+<img src="X.svg" alt="X">
+</a>
 
-        <a class="icon-link" href="https://www.instagram.com/rewatchabilityscore/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <img src="Instagram.svg" alt="Instagram">
-        </a>
+<a class="icon-link" href="https://www.threads.net/@rewatchabilityscore" target="_blank">
+<img src="Threads.svg" alt="Threads">
+</a>
 
-        <a class="icon-link" href="https://www.facebook.com/rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <img src="Facebook.svg" alt="Facebook">
-        </a>
+<a class="icon-link" href="https://www.instagram.com/rewatchabilityscore/" target="_blank">
+<img src="Instagram.svg" alt="Instagram">
+</a>
 
-        <a class="icon-link" href="https://www.youtube.com/@rewatchabilityscore" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <img src="YouTube.svg" alt="YouTube">
-        </a>
+<a class="icon-link" href="https://www.facebook.com/rewatchabilityscore" target="_blank">
+<img src="Facebook.svg" alt="Facebook">
+</a>
 
-      </div>
-    </div>
+<a class="icon-link" href="https://www.youtube.com/@rewatchabilityscore" target="_blank">
+<img src="YouTube.svg" alt="YouTube">
+</a>
 
-  </div>
+</div>
+</div>
+
+</div>
+
 </body>
 </html>
